@@ -20,16 +20,20 @@ export default function App() {
           <View className = "relative mt-4 ">
             <Text className = "text-4xl text-black-100 font-bold text-justify">
               Connect, Share and Inspire with {' '}
-                <Text className = "text-secondary-500">Conso</Text>
+                <Text className = "text-secondary-500">onso</Text>
                
             </Text>
 
           </View>
-
-
+          <Image 
+            source={images.CAnimate}
+            className = "max-2-[380px] w-full h-[120px]"
+            resizeMode="contain"
+          />
+          
           <Image 
             source={images.appsPic}
-            className = "max-2-[380px] w-full h-[300px]"
+            className = "max-2-[380px] w-full h-[200px]"
             resizeMode="contain"
           />
 

@@ -7,5 +7,6 @@ import logoSmall from "../assets/images/logo-small.png";
 import empty from "../assets/images/empty.png";
 import logoConso from "../assets/images/logoConso.png";
 import appsPic from "../assets/images/appsPic.png";
+import CAnimate from "../assets/images/Animation - 1726393838964.gif"
 
-export default { profile, thumbnail, cards, path, logo, logoSmall, empty, logoConso, appsPic };
+export default { profile, thumbnail, cards, path, logo, logoSmall, empty, logoConso, appsPic,CAnimate };

@@ -45,7 +45,7 @@ export default function App() {
           </View>
 
           <CustomButton 
-            title= "Go to Home"
+            title= "Get Started"
             handlePress={() => {router.push('/sign-in')}}
             containerStyle= "w-full mt-1"
           />

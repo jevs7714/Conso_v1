@@ -5,6 +5,7 @@ import {images} from '../../constants';
 import FormField from '../../components/FormField';
 import CustomButton from '../../components/CustomButton';
 import { Link } from 'expo-router';
+import { router } from 'expo-router';
 
 const SignIn = () => {
   const [form, setform] = useState({
@@ -47,7 +48,7 @@ const SignIn = () => {
           handleChangeText = {(e) => setform({...form, password: e})}
           otherStyles = "mt-7"
           />
-
+          
           <CustomButton 
             title = "Sign In"
             handlePress = {submit}
@@ -60,7 +61,9 @@ const SignIn = () => {
                 Don't have account ?
               </Text>
               <Link href="/sign-up" 
-                  className= "text-lg font-semibold text-secondary-600">Sign Up</Link>
+                  className= "text-lg font-semibold text-secondary-500">Sign Up</Link>
+              <Link href="/home">Go to Home</Link>
+                  
 
           </View>
         </View>

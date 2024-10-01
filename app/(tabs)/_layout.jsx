@@ -4,7 +4,7 @@ import { icons } from '../../constants'
 
 const TabIcon = ({ icon, color, name, focused}) => {
   return (
-    <View className = "items-center justify-center gap-2">
+    <View className = "items-center justify-center gap-0">
       <Image 
       source={icon}
       resizeMode= "contain"
@@ -22,14 +22,20 @@ const TabsLayout = () => {
     <>
       <Tabs 
       screenOptions={{
+
         tabBarShowLabel: false,
-        tabBarActiveTintColor: '#079604',
+        tabBarActiveTintColor: '#7EA9FE',
+        tabBarHideOnKeyboard: 'true',
         tabBarStyle: {
           backgroundColor: '#FFFFFF',
-          borderTopWidth: 1,
-          borderTopColor: '#0085FF',
-          height: 70,
-        }
+         height: 47,
+         position: 'absolute',
+         bottom: 16,
+         right: 14,
+         left: 14,
+         borderRadius: 30,
+         marginHorizontal: 20,
+        },
       }}>
        
 
@@ -73,6 +79,7 @@ const TabsLayout = () => {
                 options={{
                   title: 'Bookmark',
                   headerShown: false,
+                  href: null,
                   tabBarIcon: ({ color, focused }) => (
                     <TabIcon 
                       icon = {icons.bookmark}
@@ -90,11 +97,28 @@ const TabsLayout = () => {
                       options={{
                         title: 'Profile',
                         headerShown: false,
+                        href: null,
                         tabBarIcon: ({ color, focused }) => (
                           <TabIcon 
                             icon = {icons.profile}
                             color = {color}
                             name = "Profile"
+                            focused = {focused}
+                          />
+                        )
+                      }}
+                      />
+
+                <Tabs.Screen 
+                      name= "community"
+                      options={{
+                        title: 'Community',
+                        headerShown: false,
+                        tabBarIcon: ({ color, focused }) => (
+                          <TabIcon 
+                            icon = {icons.community}
+                            color = {color}
+                            name = "Community"
                             focused = {focused}
                           />
                         )
